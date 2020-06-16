@@ -1,0 +1,55 @@
+body {
+    color: orange;
+    background: yellow;
+    text-align: right;
+}
+
+h1 {
+    text-align: left;
+    font-family: cursive;
+}
+
+h2 {
+    color: red;
+    text-align: center;
+}
+
+ul {
+    border: 3px solid green;
+    padding: 20px 5px; /* whitespace within and element */
+    margin-top: 48px; /* distance between elements */
+}
+
+p {
+    transition: all 1s;
+}
+
+p:hover {
+    font-size: 36px;
+}
+
+input[type="submit"] {
+    padding: 5px 15px;
+    background: white;
+    border: 1px solid black;
+    margin: 1em 3em;
+    transition: all .5s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+}
+
+input[type="submit"]:hover {
+    background: black;
+    color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .6);
+}
+
+.highlight {
+    background: hotpink;
+    color: lightskyblue;
+}
+
+.fancy-font {
+    font-family: fantasy;
+}
+
+

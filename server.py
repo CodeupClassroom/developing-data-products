@@ -25,7 +25,10 @@ def roll_dice():
 @app.route('/roll-dice/<int:n>')
 def roll_n_dice(n):
     rolls = [str(randint(1, 6)) for i in range(n)]
-    return f'Your rolls are: {", ".join(rolls)}'
+    return render_template(
+        'dice-rolls.html',
+        rolls=rolls,
+    )
 
 @app.route('/say/<greeting>/to/<name>')
 def sayhelloto(greeting, name):

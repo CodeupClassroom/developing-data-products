@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Roll Results</h1>
+
+    <p>Here are your dice rolls:</p>
+
+    <ul>
+        {% for roll in rolls %}
+        <li class="{{ 'even' if roll % 2 == 0 else 'odd' }}">roll</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
