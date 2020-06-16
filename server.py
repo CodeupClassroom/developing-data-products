@@ -1,5 +1,5 @@
 from random import randint
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -50,4 +50,29 @@ def greet_multiple():
 
     return render_template('greet-multiple.html', greetings=greetings)
 
+@app.route('/order-pizza')
+def show_order_pizza_form():
+    return render_template('order-pizza-form.html')
 
+@app.route('/order-pizza', methods=['POST'])
+def handle_pizza_order_submission():
+
+    topping1 = request.form['topping1']
+    topping2 = request.form['topping2']
+    pizza = f'{topping1} and {topping2}'
+
+    return f'One pizza with {pizza} on the way!'
+
+@app.route('/count-to')
+def count_to():
+    return render_template('counting-form.html')
+
+@app.route('/count-to', methods=['POST'])
+def handle_counting_form_submission():
+    n = int(request.form['n'])
+    numbers = range(1, n + 1)
+
+    return render_template(
+        'counting-results.html',
+        numbers=numbers
+    )

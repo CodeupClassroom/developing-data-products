@@ -19,3 +19,14 @@
     2. Activate it `. env/bin/activate`
     3. Work on our project
     4. Deactivate
+
+## HTML Forms
+
+Form workflow
+
+1. Visit a page where a form is shown (GET)
+2. Fill out information in the form
+3. Submit the form (POST)
+4. Form inputs are processed
+5. Results are shown
+
