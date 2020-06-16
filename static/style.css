@@ -44,7 +44,7 @@ input[type="submit"]:hover {
 }
 
 .highlight {
-    background: hotpink;
+    background: linear-gradient(45deg, pink, white, pink, white, pink);
     color: lightskyblue;
 }
 
