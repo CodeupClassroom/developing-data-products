@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Here is your message:</h1>
+
+    <p>{{ message }}</p>
+
+    <p>Here are your dice rolls:</p>
+
+    <ul>
+        {% for roll in rolls %}
+        <li>{{ roll }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

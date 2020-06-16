@@ -1,11 +1,11 @@
 from random import randint
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print('Hello World!')
+    return render_template('index.html')
 
 @app.route('/another-page')
 def another_page():
@@ -29,4 +29,25 @@ def roll_n_dice(n):
 
 @app.route('/say/<greeting>/to/<name>')
 def sayhelloto(greeting, name):
-    return f'{greeting}, {name}!'
+
+    message = f'{greeting}, {name}!'
+
+    n_dice = len(name)
+    rolls = [randint(1, 6) for i in range(n_dice)]
+
+    return render_template(
+        'greeting.html',
+        message=message,
+        rolls=rolls,
+    )
+
+# This function produces a response for one type of request
+@app.route('/greet-multiple')
+def greet_multiple():
+    # Data processing
+    names = ['ryan', 'chase', 'jada', 'alec', 'david', 'daniel']
+    greetings = [f'Hello, {name}!' for name in names]
+
+    return render_template('greet-multiple.html', greetings=greetings)
+
+
