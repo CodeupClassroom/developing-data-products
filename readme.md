@@ -30,3 +30,16 @@ Form workflow
 4. Form inputs are processed
 5. Results are shown
 
+## How do we make our website live?
+
+1. Buy a domain name (namecheap.com)
+2. Own/rent a server -- cloud hosting (digital ocean)
+3. Domain Name -> Server IP Address -- DNS
+4. Server Setup
+    - web server running that runs flask
+
+Don't pay money for an https cert!
+
+Check out the [codeup deployment tool][1]
+
+[1]: https://github.com/zgulde/cods/blob/master/docs/python-deployment-guide.md
